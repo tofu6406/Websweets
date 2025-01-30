@@ -37,12 +37,8 @@ header {
 	}
 }
 
-
 .navbar .navbar-toggler {
 	color: #612c16;
-}
-
-.navbar .navbar-nav {
 }
 
 .navbar .navbar-nav .nav-link {
@@ -76,6 +72,154 @@ li+ li {
 	background-position: right;
 	background-size: cover;
 	color: white;
+}
+
+.my_information {
+	background-image: url(../images/siroback.jpeg);
+	text-align: center;
+	padding: 50px 0;
+	color: #612c16;
+
+	/* ブログリスト全体のスタイル */
+	.blog-list {
+		display: grid; /* グリッドレイアウトを使用 */
+		grid-template-columns: repeat(1, 1fr);
+		list-style: none;
+		padding: 0;
+		margin: 20px 10%;
+		max-width: auto;
+		box-sizing: border-box;
+	}
+
+	@media (min-width: 768px) {
+		.blog-list {
+			grid-template-columns: repeat(2, 1fr); /* 2列固定 */
+		}
+	}
+
+	/* 各記事のスタイル */
+	.blog-item {
+		margin-bottom: 20px;
+		background-color: rgb(209, 181, 146, 30%);
+		border: 1px solid #ddd;
+		border-radius: 8px;
+		overflow: hidden;
+		transition: transform 0.2s ease;
+		box-sizing: border-box; /* 余白やボーダーの影響を防ぐ */
+	}
+
+	.blog-item:hover {
+		transform: translateY(-5px);
+	}
+
+	/* 記事のリンク */
+	.blog-link {
+		display: flex;
+		text-decoration: none;
+		color: #333;
+	}
+
+	/* サムネイル画像 */
+	.blog-thumbnail img {
+		margin-top: 25%;
+		margin-left: 15%;
+		width: 60px;
+		height: 60px;
+		object-fit: cover;
+		/* border-right: 1px solid #ddd; */
+		border-radius: 50%;
+	}
+
+	/* 記事情報 */
+	.blog-info {
+		padding: 10px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	/* 日付 */
+	.blog-date {
+		font-size: 0.9em;
+		color: #888;
+		margin-bottom: 5px;
+		margin-left: 20px;
+		text-align: left;
+	}
+
+	/* タイトル */
+	.blog-title {
+		font-family: "M PLUS 1p", serif;
+		font-size: 1.1em;
+		font-weight: bold;
+		margin: 0;
+		margin-left: 20px;
+		color: #612c16;
+		transition: color 0.2s ease;
+		text-align: left;
+	}
+
+	.blog-link:hover .blog-title {
+		color: #007bff;
+	}
+}
+
+.c-title .c-title-in h1 {
+	font-size: 35px;
+}
+
+.c-title{
+    display: inline-flex; /* 横並び */
+    align-items: center; /* 高さを揃える */
+    font-size: 1.5rem; /* 文字サイズ */
+    font-weight: bold;
+    position: relative;
+    padding: 5px 15px;
+}
+
+.c-title::before,
+.c-title::after {
+    content: "("; /* 開始カッコ */
+    font-size: 1.5rem;
+    color: #333;
+	padding: 0 50px;
+}
+
+.c-title::after {
+    content: ")"; /* 終了カッコ */
+}
+
+.c-title-in {
+    flex-direction: column; /* 縦並びにする */
+}
+
+.c-title-in h1 {
+	padding: 0;
+	margin: 0;
+}
+
+.c-title-in p {
+	padding: 0;
+	margin: 0;
+	position: relative; /* relativeを指定 */
+	top: -10px; /* 上から10px移動 */
+}
+
+.my_information img {
+	width: 50px;
+}
+
+.my_information .row .col {
+	background-color: gba(8,105,212,1);
+	text-align: left;
+
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
 }
 
 @media screen and (max-width: 1085px) {
